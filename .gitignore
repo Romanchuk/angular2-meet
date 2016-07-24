@@ -8,6 +8,7 @@ link-checker-results.txt
 *.js.map
 e2e/**/*.js
 e2e/**/*.js.map
+build/**/*.*
 _test-output
 _temp
 
