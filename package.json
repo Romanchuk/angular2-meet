@@ -43,7 +43,6 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
-    "angular2-jwt": "^0.1.18",
     "canonical-path": "0.0.2",
     "concurrently": "^2.2.0",
     "cors": "^2.7.1",
@@ -51,6 +50,7 @@
     "express-jwt": "^3.4.0",
     "http-server": "^0.9.0",
     "jasmine-core": "~2.4.1",
+    "jspm": "^0.16.39",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-cli": "^0.1.2",
@@ -64,5 +64,16 @@
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   },
-  "repository": {}
+  "repository": {},
+  "jspm": {
+    "configFile": "systemjs.config.js",
+    "dependencies": {
+      "angular2-jwt": "npm:angular2-jwt@^0.1.18"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
 }
