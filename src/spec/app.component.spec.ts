@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { App } from '../app/app';
+import { AppComponent } from '../app/app.component';
 
 import { async, inject } from '@angular/core/testing';
 
@@ -18,15 +18,15 @@ describe('AppComponent with TCB', function () {
   it('should instantiate component',
     async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
 
-    tcb.createAsync(App).then(fixture => {
-      expect(fixture.componentInstance instanceof App).toBe(true, 'should create App');
+    tcb.createAsync(AppComponent).then(fixture => {
+      expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create App');
     });
   })));
 
   it('should have expected <h1> text',
     async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
 
-      tcb.createAsync(App).then(fixture => {
+      tcb.createAsync(AppComponent).then(fixture => {
       // fixture.detectChanges();  // would need to resolve a binding but we don't have a binding
 
       let h1 = fixture.debugElement.query(By.css('h1')).nativeElement;            // preferred
