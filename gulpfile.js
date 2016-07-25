@@ -17,4 +17,4 @@ gulp.task('build', function(c){
     seq('clean', ['build-scripts', 'build-templates'], c);
 });
 
-gulp.task('watch', ['watch-scripts', 'watch-templates']);
+gulp.task('watch', ['watch-templates', 'watch-scripts']);

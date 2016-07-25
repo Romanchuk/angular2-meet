@@ -1,12 +1,6 @@
 System.config({
   defaultJSExtensions: true,
-  transpiler: "babel",
-  babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
-  },
+  transpiler: false,
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -69,7 +63,7 @@ System.config({
   map: {
     "@angular": "node_modules/@angular",
     "angular2-in-memory-web-api": "node_modules/angular2-in-memory-web-api",
-    "angular2-jwt": "npm:angular2-jwt@0.1.18",
+    "angular2-jwt": "node_modules/angular2-jwt",
     "app": "build/src/app",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",

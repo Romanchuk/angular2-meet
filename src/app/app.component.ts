@@ -5,19 +5,18 @@ import { HeaderComponent } from './header.component';
 @Component({
     moduleId: module.id,
     selector: 'my-app',
-    template: '<h1>My First Angular 1 App</h1>',
+    templateUrl: 'app.component.html',
     providers: [AuthService],
     directives: [HeaderComponent]
 })
 export class AppComponent implements OnInit {
 
-    constructor(private authService: AuthService){
+    constructor(private authService: AuthService) {
         console.log('App constructor');
     }
 
-    ngOnInit(){
+    ngOnInit() {
         console.log('App ngOnInit');
         this.authService.login('gonto', 'gonto');
     }
-
  }
