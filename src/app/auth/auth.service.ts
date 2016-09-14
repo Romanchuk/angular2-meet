@@ -1,23 +1,21 @@
-import { Http, Response } from '@angular/http';
-// services/auth.service.ts
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-import {  tokenNotExpired } from 'angular2-jwt/angular2-jwt';
+import { tokenNotExpired } from 'angular2-jwt/angular2-jwt';
 
 @Injectable()
 export class AuthService {
 
-constructor(private http: Http) {
-}
+  constructor(private http: Http) {}
 
   getUser() {
     return JSON.parse(localStorage.getItem('profile'));
   }
-  
-  isAuthenticated():boolean {      
+
+  isAuthenticated(): boolean {
     return tokenNotExpired();
   }
 
- login(username: string, password: string) {   
+ login(username: string, password: string) {
     return this.http.post('http://localhost:3001/api/login', {
         username: username,
         password: password
@@ -35,7 +33,7 @@ constructor(private http: Http) {
               console.log(error);
             }
           }
-        );  
+        );
  }
 
  logout() {

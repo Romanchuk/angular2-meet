@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './auth.service';
-import { HeaderComponent } from './header.component';
+import { AuthService } from './auth/auth.service';
 
 @Component({
     moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app.component.html',
-    providers: [AuthService],
-    directives: [HeaderComponent]
+    templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
 
