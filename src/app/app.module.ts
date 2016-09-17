@@ -13,7 +13,7 @@ import { AppComponent }  from './app.component';
 @NgModule({
     bootstrap: [AppComponent],
     declarations: [AppComponent, HeaderComponent, UsersComponent],
-    imports: [BrowserModule, HttpModule, RTSelectionModule],
+    imports: [BrowserModule, HttpModule],
    // exports: [RTModule],
     providers: [
         AUTH_PROVIDERS,
